@@ -1,0 +1,30 @@
+{
+  "name": "EE",
+  "version": "0.0.0",
+  "description": "React setup",
+  "main": "index.js",
+  "author": "Ganesh",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack-dev-server --mode development"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "mobx": "^5.0.3",
+    "mobx-react": "^5.2.3",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-decorators": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "react-hot-loader": "^4.3.3",
+    "webpack": "^4.16.2",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  }
+}
