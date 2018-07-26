@@ -15,6 +15,9 @@ class App extends React.Component {
     //     super(props)
     //     // this.state = state
     // }
+    static defaultProps = {
+        articles: []
+    }
     componentDidMount() {
         axios.get('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=d40a29aab6d04941ac90045f7221316f')
         .then(response => {
@@ -38,12 +41,6 @@ class App extends React.Component {
         )
     }
 }
-
-App.defaultProps = {
-    articles: []
-}
-
-
 
 function makeHigherOrderComponent(TargetComponent) {
     return class DataConnectorComponent extends React.Component {
