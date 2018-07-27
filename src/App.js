@@ -1,13 +1,21 @@
 import React from 'react'
 import axios from 'axios'
+import styled from 'styled-components'
 import { observable } from 'mobx'
 import { observer } from 'mobx-react'
+import { ArticleItem } from './ArticleItem/ArticleItem'
 
 const appState = observable({
     articles: [],
     message: 'Hello!',
     timer: 0,
 })
+
+const ArticlesWrapper = styled.div `
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+`
 
 @observer
 class App extends React.Component {
@@ -31,12 +39,12 @@ class App extends React.Component {
     render() {
         const { message, articles, timer } = appState
         // const { articles } = this.props
-        const articlesDOM = articles.map((item, key) => <p className={key}>{JSON.stringify(item)}</p>)
+        const articlesDOM = articles.map((item, key) => <ArticleItem article={item}/>)
         return (
             <div>
                 <h1>{message}</h1>
                 <h1>{timer}</h1>
-                <h2>{articlesDOM}</h2>
+                <ArticlesWrapper>{articlesDOM}</ArticlesWrapper>
             </div>
         )
     }
